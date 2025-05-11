@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+        "@components/*": ["components/*"],
+        "@images/*": ["images/*"]
+      },
+      // Outras configurações do TypeScript que você já possa ter...
+      "jsx": "react-jsx", // Se você estiver usando a nova transformação JSX do React
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "target": "esnext",
+      "module": "esnext"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "public", ".cache"]
+  }
