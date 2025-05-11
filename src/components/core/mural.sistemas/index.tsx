@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import imgMuralM2ACompras from '../../../images/mural-m2a-compras.jpg';
-import imgMuralM2APlanejamento from '../../../images/mural-m2a-planejamento.jpg';
-import imgMuralM2APesquisas from '../../../images/mural-m2a-pesquisas.jpg';
-import imgMuralM2AFornecedores from '../../../images/mural-m2a-fornecedores.jpg';
+
+import imgMuralM2ACompras from '@images/mural-m2a-compras.jpg';
+import imgMuralM2APlanejamento from '@images/mural-m2a-planejamento.jpg';
+import imgMuralM2APesquisas from '@images/mural-m2a-pesquisas.jpg';
+import imgMuralM2AFornecedores from '@images/mural-m2a-fornecedores.jpg';
 
 
 const MuralContainer = styled.div`

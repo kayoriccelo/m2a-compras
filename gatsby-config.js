@@ -51,4 +51,5 @@ module.exports = {
 		},
 		'gatsby-plugin-tsconfig-paths',
 	],
+	pathPrefix: `/m2a-compras`,
 }
