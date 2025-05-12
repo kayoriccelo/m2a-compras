@@ -7,7 +7,7 @@ export const SInteligenciaArticifialContainer = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
-    padding: 10rem 0;
+    padding: 5rem 0;
     background: linear-gradient(to bottom, #FFFFFF, #F0F0F0),
                 repeating-linear-gradient(
                     45deg,
@@ -23,12 +23,12 @@ export const SInteligenciaArticifialContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50rem;
+    height: 45rem;
 `;
 
 
 export const SInteligenciaArticifialTitulo = styled.label`
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: "Poppins", sans-serif;
-    margin: 10rem;
+    margin: 4rem;
 `;

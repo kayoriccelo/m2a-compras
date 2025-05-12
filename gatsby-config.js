@@ -11,12 +11,13 @@
 const path = require('path');
 
 module.exports = {
-	siteMetadata: {
-		title: `Gatsby Default Starter`,
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-		author: `@gatsbyjs`,
-		siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-	},
+	pathPrefix: `/m2a-compras`,
+	// siteMetadata: {
+	// 	title: `Gatsby Default Starter`,
+	// 	description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+	// 	author: `@gatsbyjs`,
+	// 	siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+	// },
 	plugins: [
 		`gatsby-plugin-image`,
 		{
@@ -46,10 +47,9 @@ module.exports = {
 			resolve: 'gatsby-plugin-root-import',
 			options: {
 				'@components': path.join(__dirname, 'src/components'),
-				'@images': path.join(__dirname, 'src/images')
+				'@images': path.join(__dirname, 'src/images'),
 			},
 		},
 		'gatsby-plugin-tsconfig-paths',
-	],
-	pathPrefix: `/m2a-compras`,
+	]
 }

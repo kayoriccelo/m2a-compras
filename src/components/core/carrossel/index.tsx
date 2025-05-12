@@ -1,4 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { MdNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
+
+
 import {
     SCarrosselContainer,
     SCarrosselWrapper,
@@ -59,7 +62,9 @@ export default function Carrossel({ images }) {
                         zIndex: 1,
                     }}
                 >
-                    <SControlButton onClick={goToPrevious}>&lt;</SControlButton>
+                    <SControlButton onClick={goToPrevious}>
+                        <MdOutlineNavigateBefore />
+                    </SControlButton>
                 </div>
 
                 <SCarrosselWrapper ref={wrapperRef}>
@@ -81,7 +86,9 @@ export default function Carrossel({ images }) {
                         zIndex: 1,
                     }}
                 >
-                    <SControlButton onClick={goToNext}>&gt;</SControlButton>
+                    <SControlButton onClick={goToNext}>
+                        <MdNavigateNext />
+                    </SControlButton>
                 </div>
             </div>
 

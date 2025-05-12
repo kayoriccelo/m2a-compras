@@ -6,11 +6,12 @@ export const SCardInteligenciaArticifialContainer = styled.div`
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.375rem -0.0625rem, rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.25rem -0.0625rem;
-    height: 40rem;
+    min-height: 30rem;
+    max-width: 20rem;
     margin: 1rem;
     border-radius: 2rem;
 
-    width: calc(30% - 10rem);
+    width: 100%;
     overflow: visible;
 `
 
@@ -19,10 +20,11 @@ export const SCardInteligenciaArticifialContent = styled.div`
     opacity: 1;
     background: transparent;
     box-shadow: none;
+    max-height: 35rem;
 `
 
 export const SCardInteligenciaArticifialImagem = styled.img`
-    margin-top: -40px;
+    margin-top: -45px;
     height: 20rem;
     width: 100%;
     border-radius: 2rem;
@@ -42,7 +44,7 @@ export const SCardInteligenciaArticifialTexto = styled.div`
 
 export const SCardInteligenciaArticifialTitulo = styled.label`
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #003366;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 0.5rem;
@@ -53,8 +55,8 @@ export const SCardInteligenciaArticifialTitulo = styled.label`
 `
 
 export const SCardInteligenciaArticifialDescricao = styled.label`
-    font-size: 1rem;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
 
     @media (max-width: 768px) {
         font-size: 0.9rem;

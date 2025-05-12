@@ -9,7 +9,7 @@ export const SDepoimentosBloco = styled.div`
     color: black;
     background: '#dfdfdf';
     max-width: 100%;
-    margin: 10rem;
+    margin: 10rem 1rem;
 `;
 
 export const SDepoimentosTitulo = styled.label`
@@ -22,5 +22,4 @@ export const SDepoimentosTitulo = styled.label`
     margin-bottom: 2rem;
     color: #003366;
     color: #333;
-
 `;

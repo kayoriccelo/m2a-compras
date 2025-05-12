@@ -71,11 +71,11 @@ const IndexPage = () => {
 
 			<InteligenciaArtificial />
 
-			<Depoimentos />
-
 			<Noticias />
 
 			<Conteudo />
+
+			<Depoimentos />
 
 			<Rodape>
 				Rodapé

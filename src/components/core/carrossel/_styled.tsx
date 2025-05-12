@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const SCarrosselContainer = styled.div`
     position: relative;
-    max-width: 100%;
     overflow: hidden;
     border-radius: 1rem;
 `;
@@ -45,19 +44,23 @@ export const SControlsContainer = styled.div`
 `;
 
 export const SControlButton = styled.button`
-    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
     color: #333;
     border: none;
     padding: 0.5rem;
     font-size: 1.5rem;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 0.5rem;
     transition: background-color 0.3s ease;
     pointer-events: auto;
     z-index: 1;
 
     &:hover {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: #333;
+        color: #ffffff
     }
 
     @media (max-width: 1024px) {
