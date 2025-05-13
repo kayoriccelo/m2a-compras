@@ -5,6 +5,6 @@ export interface ICardProduto {
     url_imagem: string,
 }
 
-export interface ISCardProdutoContainer {
+export interface ISCardProdutoImagem {
     url_imagem: string
 }

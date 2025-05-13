@@ -1,32 +1,28 @@
 import styled from "styled-components";
 
-import { ISCardProdutoContainer } from "./_interface";
+import { ISCardProdutoImagem } from "./_interface";
 
 
-export const SCardProdutoContainer = styled.div<ISCardProdutoContainer>`
-    flex: 1 1 calc(33.33% - 20px);
-    position: relative;    
+export const SCardProdutoContainer = styled.div`
+    flex: 1 1 calc(33.33% - 6rem);
+    position: relative; 
+    border-radius: 1rem;
+    margin: 2rem 1rem;
+    height: 15rem;   
+`;
+
+export const SCardProdutoImagem = styled.div<ISCardProdutoImagem>`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    height: 15rem;   
-    margin: 0.5rem; 
+    height: 15rem;
+    margin: -0.8rem 0.8rem 0.8rem -0.8rem;
     border-radius: 0.8rem;
     background: url(${props => props.url_imagem}) no-repeat center center;
-    background-size: cover; 
-
-    &::before {
-        content: '';
-        position: absolute;
-        border-radius: 1rem;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.34);
-        z-index: 0;
-    }
+    background-size: cover;
+    box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.34);
+    filter: brightness(65%);
     
     @media (max-width: 1200px) {
         flex: 1 1 calc(50% - 20px); /* 2 itens por linha em telas menores */
@@ -40,6 +36,8 @@ export const SCardProdutoContainer = styled.div<ISCardProdutoContainer>`
 `;
 
 export const SCardProdutoTitulo = styled.label`
+    position: absolute;
+    bottom: 3rem;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -48,7 +46,7 @@ export const SCardProdutoTitulo = styled.label`
     width: 15rem;
     font-weight: bold;
     font-size: 1.2rem;
-    margin: 0.2rem 1rem;
+    margin: 1rem;
     border-radius: 0.5rem;
     color: #ffffff;
     background-color: #ffc107;
@@ -62,12 +60,12 @@ export const SCardProdutoTitulo = styled.label`
 `;
 
 export const SCardProdutoDescricao = styled.label`
-    z-index: 1;
+    position: absolute;
+    bottom: 1rem;
     margin: 0 1rem 1rem 1rem;
     color: #ffffff;
-    font-weight: bold;
     font-size: 1rem;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
     @media (max-width: 768px) {
         font-size: 0.9rem;

@@ -8,14 +8,14 @@ export const SInteligenciaArticifialContainer = styled.div`
     justify-content: center;
     border-radius: 2rem;
     padding: 5rem 0;
-    background: linear-gradient(to bottom, #FFFFFF, #F0F0F0),
-                repeating-linear-gradient(
-                    45deg,
-                    transparent,
-                    transparent 5px,
-                    rgba(240, 240, 240, 0.2) 5px,
-                    rgba(240, 240, 240, 0.2) 10px
-                );
+    background: linear-gradient(to bottom, #FFFFFF,rgba(0, 51, 102, 0.25), #FFFFFF),
+            repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 5px,
+                rgba(240, 240, 240, 0.2) 5px,
+                rgba(240, 240, 240, 0.2) 10px
+            );
     background-blend-mode: overlay;
 `;
 

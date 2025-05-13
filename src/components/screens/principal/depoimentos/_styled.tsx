@@ -17,7 +17,7 @@ export const SDepoimentosTitulo = styled.label`
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     min-width: 30rem;
     margin-bottom: 2rem;
     color: #003366;

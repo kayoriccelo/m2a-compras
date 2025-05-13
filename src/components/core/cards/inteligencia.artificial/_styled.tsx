@@ -7,9 +7,9 @@ export const SCardInteligenciaArticifialContainer = styled.div`
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.375rem -0.0625rem, rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.25rem -0.0625rem;
     min-height: 30rem;
-    max-width: 20rem;
+    max-width: 22rem;
     margin: 1rem;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
 
     width: 100%;
     overflow: visible;
@@ -27,7 +27,7 @@ export const SCardInteligenciaArticifialImagem = styled.img`
     margin-top: -45px;
     height: 20rem;
     width: 100%;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.50rem 0.50rem -0.0625rem, rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.50rem -0.0625rem;
     filter: brightness(95%);
 `

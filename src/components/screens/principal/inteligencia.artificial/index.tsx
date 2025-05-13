@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CardInteligenciaArticifial from "@components/core/cards/card.inteligencia.artificial";
+import CardInteligenciaArticifial from "@components/core/cards/inteligencia.artificial";
 
 import imgIA from "@images/ia-software.png";
 import imgIA2 from "@images/ia-2-software.png";

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
+import { ICabecalho } from './_interface';
 import { SCabecalho } from './_styled';
 
 
-export default function Cabecalho ({ children }) {
+export default function Cabecalho ({ children }: ICabecalho) {
     const [isFixed, setIsFixed] = useState(false);
 
     useEffect(() => {

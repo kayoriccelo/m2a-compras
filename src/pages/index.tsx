@@ -4,15 +4,9 @@ import '@fontsource/roboto';
 import '@fontsource/montserrat-alternates';
 import '@fontsource/poppins';
 
-import Logo from "@components/core/logo";
-import BotaoSelecionePlano from "@components/core/botoes/selecione.plano";
 import Container from "@components/layout/container";
-import Cabecalho from "@components/layout/cabecalho";
-import Banner from "@components/layout/banner";
-import MenuPrincipal from "@components/core/menus/principal";
 import Rodape from "@components/layout/rodape";
 import Entidades from "@components/screens/principal/entidades";
-import PreviaSistemas from "@components/screens/principal/previa.sistemas";
 import Inicio from "@components/screens/principal/inicio";
 import Produtos from "@components/screens/principal/produtos";
 import Estatisticas from "@components/screens/principal/estatisticas";
@@ -47,19 +41,9 @@ const IndexPage = () => {
 
 	return (
 		<Container>
-			<Inicio>
-				<Cabecalho isCabecalhoFlutuante={isCabecalhoFlutuante}>
-					<Logo isCabecalhoFlutuante={isCabecalhoFlutuante} />
-
-					<MenuPrincipal />
-
-					<BotaoSelecionePlano isCabecalhoFlutuante={isCabecalhoFlutuante} />
-				</Cabecalho>
-
-				<Banner />
-
-				<PreviaSistemas />
-			</Inicio>
+			<Inicio 
+				isCabecalhoFlutuante={isCabecalhoFlutuante} 
+			/>
 
 			<Entidades />
 
@@ -71,11 +55,11 @@ const IndexPage = () => {
 
 			<InteligenciaArtificial />
 
-			<Noticias />
+			<Depoimentos />
+
+			<Noticrias />
 
 			<Conteudo />
-
-			<Depoimentos />
 
 			<Rodape>
 				Rodapé

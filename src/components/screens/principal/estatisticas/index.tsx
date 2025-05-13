@@ -9,8 +9,8 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { GiNewspaper } from "react-icons/gi";
 import { VscFolderLibrary } from "react-icons/vsc";
 
-import CardEstatistica from '@components/core/cards/card.estatistica';
-import { CardEstatisticaItem } from '@components/core/cards/card.estatistica';
+import CardEstatistica from '@components/core/cards/estatistica';
+import { CardEstatisticaItem } from '@components/core/cards/estatistica';
 import Contador from '@components/core/contador';
 
 import {

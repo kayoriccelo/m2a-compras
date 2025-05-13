@@ -1,4 +1,5 @@
 import React from "react"
+import { withPrefix } from "gatsby";
 
 import { ILogo } from "./_interface"
 import { SLogoContainer, SLogoGlobo, SLogoTexto } from "./_styled"
@@ -12,12 +13,12 @@ export default function Logo({ isCabecalhoFlutuante }: ILogo) {
         <SLogoContainer isCabecalhoFlutuante={isCabecalhoFlutuante}>
             <SLogoGlobo
                 isCabecalhoFlutuante={isCabecalhoFlutuante}
-                src={M2ALogoGlobo}
+                src={withPrefix(M2ALogoGlobo)}
             />
 
             <SLogoTexto
                 isCabecalhoFlutuante={isCabecalhoFlutuante}
-                src={M2ALogoTexto}
+                src={withPrefix(M2ALogoTexto)}
             />
         </SLogoContainer>
     )
