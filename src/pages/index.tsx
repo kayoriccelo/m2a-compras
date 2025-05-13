@@ -57,7 +57,7 @@ const IndexPage = () => {
 
 			<Depoimentos />
 
-			<Noticrias />
+			<Noticias />
 
 			<Conteudo />
 

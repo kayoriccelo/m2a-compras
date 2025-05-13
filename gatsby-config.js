@@ -4,52 +4,46 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
-
 const path = require('path');
 
 module.exports = {
-	pathPrefix: `/m2a-compras`,
-	// siteMetadata: {
-	// 	title: `Gatsby Default Starter`,
-	// 	description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-	// 	author: `@gatsbyjs`,
-	// 	siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-	// },
-	plugins: [
-		`gatsby-plugin-image`,
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `images`,
-				path: `${__dirname}/src/images`,
-			},
-		},
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
-		{
-			resolve: `gatsby-plugin-manifest`,
-			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
-				start_url: `/`,
-				background_color: `#663399`,
-				// This will impact how browsers show your PWA/website
-				// https://css-tricks.com/meta-theme-color-and-trickery/
-				// theme_color: `#663399`,
-				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-			},
-		},
-		{
-			resolve: 'gatsby-plugin-root-import',
-			options: {
-				'@components': path.join(__dirname, 'src/components'),
-				'@images': path.join(__dirname, 'src/images'),
-			},
-		},
-		'gatsby-plugin-tsconfig-paths',
-	]
-}
+  // Prefixo para o GitHub Pages (coloque o nome do seu repositório aqui)
+  pathPrefix: `/m2a-compras`,
+
+  // Plugins do Gatsby
+  plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      // Configura o diretório de imagens para o GraphQL
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      // Configura o manifest para Progressive Web App
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `m2a-compras`,
+        short_name: `m2a`,
+        start_url: `/m2a-compras/`, // Caminho base para funcionar no GitHub Pages
+        background_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // Caminho relativo ao root do projeto
+      },
+    },
+    {
+      // Configura os aliases para imports simplificados
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        '@components': path.join(__dirname, 'src/components'),
+        '@images': path.join(__dirname, 'src/images'),
+      },
+    },
+    // Suporte para caminhos relativos no TypeScript
+    'gatsby-plugin-tsconfig-paths',
+  ],
+};
