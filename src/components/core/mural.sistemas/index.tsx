@@ -1,5 +1,4 @@
 import React from 'react';
-import { withPrefix } from "gatsby";
 import styled from 'styled-components';
 
 import imgMuralM2ACompras from '@images/mural-m2a-compras.jpg';
@@ -88,28 +87,28 @@ const MuralDeImagens = () => {
 		<MuralContainer>
 			<MuralImagemWrapper>
 				<MuralImagem1
-					src={withPrefix(imgMuralM2ACompras)}
+					src={imgMuralM2ACompras}
 					alt={'M2A Compras'}
 				/>
 			</MuralImagemWrapper>
 
 			<MuralImagemWrapper>
 				<MuralImagem2
-					src={withPrefix(imgMuralM2APlanejamento)}
+					src={imgMuralM2APlanejamento}
 					alt={'M2A Planejamento'}
 				/>
 			</MuralImagemWrapper>
 
 			<MuralImagemWrapper>
 				<MuralImagem3
-					src={withPrefix(imgMuralM2AFornecedores)}
+					src={imgMuralM2AFornecedores}
 					alt={'M2A Fornecedores'}
 				/>
 			</MuralImagemWrapper>
 
 			<MuralImagemWrapper>
 				<MuralImagem4
-					src={withPrefix(imgMuralM2APesquisas)}
+					src={imgMuralM2APesquisas}
 					alt={'M2A Pesquisas'}
 				/>
 			</MuralImagemWrapper>
