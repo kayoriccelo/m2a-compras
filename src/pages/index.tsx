@@ -21,7 +21,7 @@ import '../styles/global.css';
 
 
 const IndexPage = () => {
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [windowWidth, setWindowWidth] = useState(0);
 	const [scrollTop, setScrollTop] = useState(0);
 	
 	const handleScroll = () => {
