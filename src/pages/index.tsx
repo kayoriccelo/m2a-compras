@@ -26,7 +26,7 @@ const IndexPage = () => {
 	
 	const handleScroll = () => {
 		const scrollY = window.scrollY;
-	
+
 		setScrollTop(scrollY);
 	};
 
@@ -38,6 +38,8 @@ const IndexPage = () => {
 		window.addEventListener('scroll', handleScroll);
 
         window.addEventListener('resize', handleResize);
+
+		handleResize()
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
