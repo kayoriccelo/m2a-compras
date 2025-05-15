@@ -8,7 +8,7 @@ export const SNoticiaContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     margin: 0;
-    height: 65rem;
+    min-height: 65rem;
     border-radius: 2rem;
     background: linear-gradient(to bottom, #FFFFFF,rgba(0, 51, 102, 0.25), #FFFFFF),
             repeating-linear-gradient(

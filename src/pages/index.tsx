@@ -61,7 +61,7 @@ const IndexPage = () => {
 
 			<Estatisticas />
 
-			{/* <Qualidades /> */}
+			<Qualidades />
 
 			<InteligenciaArtificial />
 
