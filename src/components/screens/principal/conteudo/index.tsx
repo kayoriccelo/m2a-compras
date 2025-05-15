@@ -10,9 +10,9 @@ import imgProdutoFornecedores from "@images/produto_fornecedores.png";
 
 
 const GloboContainer = styled.div`
-    height: 50rem;
+    height: 60rem;
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     aspect-ratio: 1;
     position: relative;
     display: flex;
@@ -59,20 +59,18 @@ const Card = styled(motion.div)`
   border-radius: 12px;
   position: absolute;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
   text-align: center;
   font-family: "Poppins", sans-serif;
   padding: 1rem;
   margin: 1rem;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: #ffffff;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
   z-index: 1;
   overflow: hidden;
-  border: 1px outset  #FFFFFF;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #ffffff;
   cursor: pointer;
 
   &::before {
@@ -82,7 +80,7 @@ const Card = styled(motion.div)`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.13);
     z-index: -1;
   }
 
@@ -91,17 +89,22 @@ const Card = styled(motion.div)`
     height: 70px;
     font-size: 0.8rem;
   }
+
+  &:hover {
+    filter: brightness(90%);
+  }
 `;
 
 const positions = [
-    { x: -120, y: -120 },
-    { x: 120, y: -120 },
-    { x: -120, y: 120 },
-    { x: 120, y: 120 },
-    { x: 0, y: -170 },
-    { x: 0, y: 170 },
-    { x: -170, y: 0 },
-    { x: 170, y: 0 },
+    // Círculo interno
+    { x: -0, y: -300 },
+    { x: 0, y: 300 },
+    { x: -300, y: 200 },
+    { x: 300, y: 200 },
+    { x: -390, y: 0 },
+    { x: 390, y: 0 },
+    { x: -300, y: -200 },
+    { x: 300, y: -200 },
 ];
 
 const GloboInterativo = ({ data, isVisible }) => {
@@ -142,12 +145,19 @@ const GloboInterativo = ({ data, isVisible }) => {
                     bgImage={conteudo.imagem}
                     whileHover={{
                         scale: 1.1,
-                        boxShadow: '0 8px 30px rgba(255, 255, 255, 0.2)',
                         transition: { duration: 0.5 },
                         zIndex: 1000,
                     }}
                 >
+                    <div
+                        style={{
+                            background: 'rgba(0, 110, 156, 0.69)',
+                            padding: '0.5rem 0.8rem',
+                            borderRadius: '0.5rem'
+                        }}
+                    >
                     {conteudo.titulo}
+                    </div>
                 </Card>
             ))}
         </GloboContainer>
@@ -155,6 +165,7 @@ const GloboInterativo = ({ data, isVisible }) => {
 };
 
 const DadosExemplo = [
+    // Círculo interno
     { id: 1, titulo: 'Governança Digital', imagem: imgProdutoProcessos },
     { id: 2, titulo: 'Soluções Integradas', imagem: imgProdutoCompras },
     { id: 3, titulo: 'Segurança de Dados', imagem: imgProdutoPesquisas },

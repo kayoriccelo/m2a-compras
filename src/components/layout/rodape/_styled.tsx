@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const SRodape = styled.div`
     width: 100%;
-    height: 60rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

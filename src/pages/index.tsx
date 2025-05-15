@@ -74,9 +74,7 @@ const IndexPage = () => {
 
 			<Conteudo />
 
-			<Rodape>
-				Rodapé
-			</Rodape>
+			<Rodape />
 		</Container>
 	)
 }

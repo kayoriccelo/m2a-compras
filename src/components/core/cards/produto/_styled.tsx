@@ -23,7 +23,7 @@ export const SCardProdutoImagem = styled.div<ISCardProdutoImagem>`
     background: url(${props => props.url_imagem}) no-repeat center center;
     background-size: cover;
     box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.34);
-    filter: brightness(65%);
+    filter: brightness(75%);
     min-width: 15rem;
     
     @media (max-width: 1200px) {
@@ -32,6 +32,10 @@ export const SCardProdutoImagem = styled.div<ISCardProdutoImagem>`
 
     @media (max-width: 900px) {
         flex: 1 1 100%; /* 1 item por linha em telas pequenas */
+    }
+
+    &:hover {
+        filter: brightness(65%);
     }
 `;
 
@@ -49,7 +53,7 @@ export const SCardProdutoTitulo = styled.label`
     margin: 1rem;
     border-radius: 0.5rem;
     color: #ffffff;
-    background-color: #ffc107;
+    background-color: rgba(0, 110, 156, 0.69);
     font-family: 'Poppins', sans-serif;
     clip-path: polygon(0% 0%, 100% 0%, 94% 50%, 100% 100%, 0% 100%, 0% 0%, 100% 100%);
 
