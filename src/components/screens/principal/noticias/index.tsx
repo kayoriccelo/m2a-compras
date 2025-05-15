@@ -21,7 +21,7 @@ export default function Noticias() {
     return (
         <SNoticiaContainer>
             <SNoticiaListaTitulo>
-                Nóticias
+                Notícias
             </SNoticiaListaTitulo>
 
             <SNoticiaContent>
@@ -34,28 +34,28 @@ export default function Noticias() {
                 <SNoticiaLista>
                     <CardNoticia
                         numero="4°"
-                        titulo="Quarta Nóticia"
+                        titulo="Quarta Notícia"
                         data="12 de maio"
                         imagem={imgProdutoCompras}
                     />
 
                     <CardNoticia
                         numero="5°"
-                        titulo="Quinta Nóticia"
+                        titulo="Quinta Notícia"
                         data="11 de maio"
                         imagem={imgProdutoCompras}
                     />
 
                     <CardNoticia
                         numero="6°"
-                        titulo="Sexta Nóticia"
+                        titulo="Sexta Notícia"
                         data="10 de maio"
                         imagem={imgProdutoCompras}
                     />
 
                     <CardNoticia
                         numero="7°"
-                        titulo="Sétima Nóticia"
+                        titulo="Sétima Notícia"
                         data="10 de maio"
                         imagem={imgProdutoCompras}
                     />
