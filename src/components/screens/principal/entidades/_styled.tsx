@@ -40,13 +40,13 @@ export const SEntidadeBotaoWrapper = styled.div`
 
 export const SEntidadeAnterior = styled.button`
     z-index: 1;
-    height: 6rem;
+    height: 13rem;
     width: 2rem;
     border: none;
     background-color: #ffffff;
     margin: 0.5rem 0;
     border-radius: 0.5rem 0 0 0.5rem;
-    border-bottom: 5px solid #004C99;
+    border-bottom: 10px solid #004C99;
     opacity: 0.7;
 
     cursor: pointer;
@@ -70,23 +70,22 @@ export const SEntidadeAnterior = styled.button`
         margin: auto;
     }
 
-    @media (min-width: 768px) {
-        height: 13rem;
+    @media (max-width: 768px) {
+        height: 6.4rem;
         margin: 1rem;
-        border-radius: 1rem 0 0 1rem;
-        border-bottom: 10px solid #004C99;
+        border-bottom: 5px solid #004C99;
     }
 `;
 
 export const SEntidadeProximo = styled.button`
     z-index: 1;
-    height: 6rem;
+    height: 13rem;
     width: 2rem;
     border: none;
     background-color: #ffffff;
     margin: 0.5rem 0;
     border-radius: 0 0.5rem 0.5rem 0;
-    border-bottom: 5px solid #004C99;
+    border-bottom: 10px solid #004C99;
     opacity: 0.7;
 
     cursor: pointer;
@@ -110,11 +109,10 @@ export const SEntidadeProximo = styled.button`
         margin: auto;
     }
 
-    @media (min-width: 768px) {
-        height: 13rem;
+    @media (max-width: 768px) {
+        height: 6.4rem;
         margin: 1rem;
-        border-radius: 0 1rem 1rem 0;
-        border-bottom: 10px solid #004C99;
+        border-bottom: 5px solid #004C99;
     }
 `;
 

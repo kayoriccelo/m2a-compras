@@ -8,7 +8,8 @@ export const SCardProdutoContainer = styled.div`
     position: relative; 
     border-radius: 1rem;
     margin: 2rem 1rem;
-    height: 15rem;   
+    min-height: 15rem;   
+    min-width: 15rem;
 `;
 
 export const SCardProdutoImagem = styled.div<ISCardProdutoImagem>`
@@ -16,22 +17,21 @@ export const SCardProdutoImagem = styled.div<ISCardProdutoImagem>`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    height: 15rem;
+    min-height: 15rem;
     margin: -0.8rem 0.8rem 0.8rem -0.8rem;
     border-radius: 0.8rem;
     background: url(${props => props.url_imagem}) no-repeat center center;
     background-size: cover;
     box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.34);
     filter: brightness(65%);
+    min-width: 15rem;
     
     @media (max-width: 1200px) {
         flex: 1 1 calc(50% - 20px); /* 2 itens por linha em telas menores */
-        max-width: calc(50% - 20px);
     }
 
     @media (max-width: 900px) {
         flex: 1 1 100%; /* 1 item por linha em telas pequenas */
-        max-width: 100%;
     }
 `;
 

@@ -10,7 +10,7 @@ import {
 } from './_styled';
 
 
-export default function MenuPrincipalSofisticado() {
+export default function MenuPrincipal() {
     return (
         <SMenuPrincipal>
             <SMenuItem>

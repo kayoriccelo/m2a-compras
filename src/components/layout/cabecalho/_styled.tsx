@@ -27,10 +27,12 @@ export const SCabecalho = styled.div`
     }
 
     @media (max-width: 1024px) {
-        flex-direction: column;
+        height: 6rem;
+        justify-content: space-between;
     }
 
     @media (max-width: 768px) {
-        flex-direction: column;
+        height: 4rem;
+        justify-content: space-between;
     }
 `;

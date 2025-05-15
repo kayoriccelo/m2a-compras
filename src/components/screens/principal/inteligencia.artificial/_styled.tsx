@@ -23,7 +23,8 @@ export const SInteligenciaArticifialContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 45rem;
+    flex-wrap: wrap;
+    min-height: 45rem;
 `;
 
 

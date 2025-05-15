@@ -28,6 +28,7 @@ export const SPreviaSistemasTitulo = styled.label`
 
     @media (max-width: 768px) {
         text-wrap-mode: wrap;
+        margin: 5rem 3rem 1rem 3rem;
     }
 `;
 

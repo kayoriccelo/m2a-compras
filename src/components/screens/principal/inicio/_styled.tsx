@@ -14,4 +14,8 @@ export const SInicio = styled.div`
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     margin-bottom: 4px;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+        max-height: 70rem;
+    }
 `;

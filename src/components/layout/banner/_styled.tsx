@@ -17,7 +17,7 @@ export const SBanner = styled.div`
     background-size: cover;
     background-position: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         justify-content: center;
         padding: 0;
     }
@@ -30,7 +30,7 @@ export const SBannerFadeIn = styled.div`
     align-items: flex-start;
     width: 100%;
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 2rem;  
     margin: 2rem;
     animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
@@ -47,7 +47,7 @@ export const SBannerFadeIn = styled.div`
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         align-items: center;
         padding: 0;
         margin: 0;
@@ -60,8 +60,8 @@ export const SBannerTitulo = styled.label`
     font-weight: bold;
     margin-bottom: 0.5rem;
 
-    @media (max-width: 768px) {
-        font-size: 2rem;
+    @media (max-width: 1024px) {
+        font-size: 1.5rem;
     }
 `;
 
@@ -71,8 +71,8 @@ export const SBannerSubtitulo = styled.label`
     margin-bottom: 1.5rem;
     text-align: left;
 
-    @media (max-width: 768px) {
-        font-size: 1.5rem;
+    @media (max-width: 1024px) {
+        font-size: 1.2rem;
         text-align: center;
         text-wrap-mode: wrap;
         margin: 0 1rem 1rem 1rem;

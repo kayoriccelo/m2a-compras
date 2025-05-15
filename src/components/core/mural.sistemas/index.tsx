@@ -12,6 +12,10 @@ const MuralContainer = styled.div`
   flex-direction: row;
   padding: 2rem;
   overflow-x: auto; /* Para lidar com muitas imagens */
+
+  @media (max-width: 728px) {
+	display: none;
+  }
 `;
 
 const MuralImagemWrapper = styled.div`

@@ -26,4 +26,8 @@ export const SBotaoSelecionePlano = styled.button`
         box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Remove a sombra ao clicar */
         transform: translateY(0); /* Retorna à posição original ao clicar */
     }
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 `

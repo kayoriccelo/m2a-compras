@@ -6,12 +6,10 @@ export const SCardInteligenciaArticifialContainer = styled.div`
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.375rem -0.0625rem, rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.25rem -0.0625rem;
-    min-height: 30rem;
+    height: 34rem;
     max-width: 22rem;
-    margin: 1rem;
+    margin: 2rem 1rem;
     border-radius: 1.5rem;
-
-    width: 100%;
     overflow: visible;
 `
 

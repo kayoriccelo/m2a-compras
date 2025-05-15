@@ -5,24 +5,27 @@ export const SCarrosselContainer = styled.div`
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
+
+    @media (max-width: 768px) {
+        width: 100%rem;
+    }
 `;
 
 export const SCarrosselWrapper = styled.div`
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 35rem;
-    padding: 1rem;
 `;
 
 export const SCarrosselItem = styled.div`
-    flex: 0 0 calc(33.33% - 1.33rem);
+    flex: 0 0 calc(33.33% - 2rem);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 1rem;
 
     @media (max-width: 768px) {
-        flex: 0 0 100%;
+        flex: 0 0 calc(100% - 2rem);
     }
 `;
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import '@fontsource/roboto';
 import '@fontsource/montserrat-alternates';
@@ -21,7 +21,8 @@ import '../styles/global.css';
 
 
 const IndexPage = () => {
-	const [scrollTop, setScrollTop] = React.useState(0);
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [scrollTop, setScrollTop] = useState(0);
 	
 	const handleScroll = () => {
 		const scrollY = window.scrollY;
@@ -29,11 +30,19 @@ const IndexPage = () => {
 		setScrollTop(scrollY);
 	};
 
+	const handleResize = () => {
+		setWindowWidth(window.innerWidth);
+	};
+
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
 
+        window.addEventListener('resize', handleResize);
+
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
+
+            window.removeEventListener('resize', handleResize);
 		};
 	}, []);
 
@@ -42,20 +51,24 @@ const IndexPage = () => {
 	return (
 		<Container>
 			<Inicio 
-				isCabecalhoFlutuante={isCabecalhoFlutuante} 
+				isCabecalhoFlutuante={isCabecalhoFlutuante}
+				windowWidth={windowWidth} 
 			/>
 
 			<Entidades />
 
-			<Produtos />
+			<Produtos />	
 
 			<Estatisticas />
 
-			<Qualidades />
+			{/* <Qualidades /> */}
 
 			<InteligenciaArtificial />
 
-			<Depoimentos />
+			<Depoimentos
+				windowWidth={windowWidth} 
+				handleResize={handleResize}
+			/>
 
 			<Noticias />
 

@@ -14,10 +14,8 @@ export const SLogoContainer = styled.div`
 
     @media (max-width: 1024px) {
         margin: 2rem;
-    }
-
-    @media (max-width: 768px) {
-        margin: 2rem;
+        justify-content: flex-start;
+        flex-direction: row;
     }
 `;
 
@@ -38,6 +36,10 @@ export const SLogoGlobo = styled.img`
             transform: rotate(360deg);
         }
     }
+
+    @media (max-width: 768px) {
+        height: 2.5rem;
+    }
 `;
 
 export const SLogoTexto = styled.img`
@@ -52,4 +54,8 @@ export const SLogoTexto = styled.img`
     }
     padding: 0.5rem 1rem;
     border-radius: 1.5rem;
+
+    @media (max-width: 768px) {
+        height: 1.5rem; 
+    }
 `;

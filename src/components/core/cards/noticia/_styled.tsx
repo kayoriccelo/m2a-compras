@@ -6,7 +6,7 @@ export const SCardNoticiaContainer = styled.div`
     align-items: center;
     justify-content: center;
     height: 8rem;
-    width: calc(100% - 2rem);
+    width: calc(100% - 4rem);
     background: #003366;
     margin: 0.5rem 2rem;
     border-radius: 1rem;
@@ -25,7 +25,7 @@ export const SCardNoticiaNumero = styled.label`
     min-height: 3rem;
     min-width: 3rem;
     border-radius: 0.5rem;
-    margin-left: -2.5rem;
+    margin-left: -1.5rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 `;
 
@@ -33,8 +33,8 @@ export const SCardNoticiaContent = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    min-width: 25rem;
     margin: 0 1rem;
+    width: 100%;
 `;
 
 export const SCardNoticiaTitulo = styled.label`
@@ -55,4 +55,5 @@ export const SCardNoticiaImagem = styled.img`
     width: 6rem;
     border-radius: 0.9rem;
     background: blue;
+    margin: 1.5rem;
 `;

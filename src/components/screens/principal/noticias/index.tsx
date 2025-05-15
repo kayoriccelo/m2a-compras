@@ -8,6 +8,7 @@ import imgProdutoCompras from "@images/produto_compras.png";
 
 import {
     SNoticiaContainer,
+    SNoticiaContent,
     SNoticiaPrincipal,
     SNoticiaLista,
     SNoticiaListaTitulo,
@@ -23,42 +24,43 @@ export default function Noticias() {
                 Nóticias
             </SNoticiaListaTitulo>
 
-            <SNoticiaPrincipal>
-                <SNoticiaPrincialImagem
-                    src={imgProdutoProcessos}
-                />
-            </SNoticiaPrincipal>
+            <SNoticiaContent>
+                <SNoticiaPrincipal>
+                    <SNoticiaPrincialImagem
+                        src={imgProdutoProcessos}
+                    />
+                </SNoticiaPrincipal>
+            
+                <SNoticiaLista>
+                    <CardNoticia
+                        numero="4°"
+                        titulo="Quarta Nóticia"
+                        data="12 de maio"
+                        imagem={imgProdutoCompras}
+                    />
 
-            <SNoticiaLista>
-                <CardNoticia
-                    numero="4°"
-                    titulo="Quarta Nóticia"
-                    data="12 de maio"
-                    imagem={imgProdutoCompras}
-                />
+                    <CardNoticia
+                        numero="5°"
+                        titulo="Quinta Nóticia"
+                        data="11 de maio"
+                        imagem={imgProdutoCompras}
+                    />
 
-                <CardNoticia
-                    numero="5°"
-                    titulo="Quinta Nóticia"
-                    data="11 de maio"
-                    imagem={imgProdutoCompras}
-                />
+                    <CardNoticia
+                        numero="6°"
+                        titulo="Sexta Nóticia"
+                        data="10 de maio"
+                        imagem={imgProdutoCompras}
+                    />
 
-                <CardNoticia
-                    numero="6°"
-                    titulo="Sexta Nóticia"
-                    data="10 de maio"
-                    imagem={imgProdutoCompras}
-                />
-
-                <CardNoticia
-                    numero="7°"
-                    titulo="Sétima Nóticia"
-                    data="10 de maio"
-                    imagem={imgProdutoCompras}
-                />
-            </SNoticiaLista>
-
+                    <CardNoticia
+                        numero="7°"
+                        titulo="Sétima Nóticia"
+                        data="10 de maio"
+                        imagem={imgProdutoCompras}
+                    />
+                </SNoticiaLista>
+                </SNoticiaContent>
             <BotaoMaisNoticias />
         </SNoticiaContainer>
     );

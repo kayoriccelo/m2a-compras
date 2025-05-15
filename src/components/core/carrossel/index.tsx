@@ -13,12 +13,14 @@ import {
     SIndicator,
 } from './_styled';
 
-export default function Carrossel({ images }) {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const wrapperRef = useRef(null);
-    const itemsPerPage = 3;
+export default function Carrossel({ windowWidth, handleResize, images }) {
     const totalItems = images.length;
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const wrapperRef = useRef(null);
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [itemsPerPage, setItemsPerPage] = useState(3);
+    
+    const [totalPages, setTotalPages] = useState(Math.ceil(totalItems / itemsPerPage))
 
     const goToPrevious = () => {
         setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 1));
@@ -35,10 +37,17 @@ export default function Carrossel({ images }) {
     };
 
     useEffect(() => {
+        if (windowWidth <= 768) {
+            setItemsPerPage(1)
+
+            setTotalPages(Math.ceil(totalItems / itemsPerPage))
+        }
+    }, [windowWidth])
+
+    useEffect(() => {
         if (wrapperRef.current) {
             wrapperRef.current.style.transition = 'transform 0.5s ease-in-out';
-            wrapperRef.current.style.transform = `translateX(-${currentIndex * 100
-                }%)`;
+            wrapperRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
     }, [currentIndex]);
 

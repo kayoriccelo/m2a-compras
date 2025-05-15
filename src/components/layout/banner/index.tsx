@@ -10,7 +10,7 @@ import {
 } from "./_styled"
 
 
-export default function Banner() {
+export default function     Banner() {
     return (
         <SBanner>
             <SBannerFadeIn>

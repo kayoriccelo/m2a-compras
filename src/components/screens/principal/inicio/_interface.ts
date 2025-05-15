@@ -1,4 +1,5 @@
 
 export interface IInicio {
-    isCabecalhoFlutuante: boolean
+    isCabecalhoFlutuante: boolean,
+    windowWidth: number
 }

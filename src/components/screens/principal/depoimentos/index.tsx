@@ -12,24 +12,27 @@ import {
 } from "./_styled";
 
 
-export default function Depoimentos() {
+export default function Depoimentos({ windowWidth, handleResize }) {
     return (
         <SDepoimentosBloco>
             <SDepoimentosTitulo>
                 Depoimentos
             </SDepoimentosTitulo>
 
-            <Carrossel images={[
-                imgProductCompras,
-                imgProductPesquisas,
-                imgProductProcessos,
-                imgProductCompras,
-                imgProductPesquisas,
-                imgProductProcessos,
-                imgProductCompras,
-                imgProductPesquisas,
-                imgProductProcessos,
-            ]} />
+            <Carrossel
+                windowWidth={windowWidth}
+                handleResize={handleResize}
+                images={[
+                    imgProductCompras,
+                    imgProductPesquisas,
+                    imgProductProcessos,
+                    imgProductCompras,
+                    imgProductPesquisas,
+                    imgProductProcessos,
+                    imgProductCompras,
+                    imgProductPesquisas,
+                    imgProductProcessos,
+                ]} />
         </SDepoimentosBloco>
     );
 };
