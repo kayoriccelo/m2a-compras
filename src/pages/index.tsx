@@ -20,7 +20,7 @@ import Depoimentos from "@components/screens/principal/depoimentos";
 import '../styles/global.css';
 
 
-const IndexPage = () => {
+const PaginaPrincipal = () => {
 	const [windowWidth, setWindowWidth] = useState(0);
 	const [scrollTop, setScrollTop] = useState(0);
 	
@@ -48,13 +48,13 @@ const IndexPage = () => {
 		};
 	}, []);
 
-	const isCabecalhoFlutuante = scrollTop === 0;
+	const ehCabecalhoFlutuante = scrollTop === 0;
 
 	return (
 		<Container>
 			<Inicio 
-				isCabecalhoFlutuante={isCabecalhoFlutuante}
-				windowWidth={windowWidth} 
+				ehCabecalhoFlutuante={ehCabecalhoFlutuante}
+				larguraAtual={windowWidth} 
 			/>
 
 			<Entidades />
@@ -69,7 +69,6 @@ const IndexPage = () => {
 
 			<Depoimentos
 				windowWidth={windowWidth} 
-				handleResize={handleResize}
 			/>
 
 			<Noticias />
@@ -83,4 +82,4 @@ const IndexPage = () => {
 
 export const Head = () => <div title="Home" />
 
-export default IndexPage
+export default PaginaPrincipal

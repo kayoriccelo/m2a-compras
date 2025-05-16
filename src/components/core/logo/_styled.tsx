@@ -22,7 +22,7 @@ export const SLogoContainer = styled.div`
 export const SLogoGlobo = styled.img`
     transition: all 0.95s ease-in-out;
 
-    ${props => props.isCabecalhoFlutuante ? 
+    ${props => props.ehCabecalhoFlutuante ? 
         `` : 
         `filter: sepia(100%) hue-rotate(200deg) brightness(70%);`
     }
@@ -45,7 +45,7 @@ export const SLogoGlobo = styled.img`
 export const SLogoTexto = styled.img`
     transition: all 0.95s ease-in-out;
 
-    ${props => props.isCabecalhoFlutuante ? 
+    ${props => props.ehCabecalhoFlutuante ? 
         `` : 
         `
         filter: sepia(100%) hue-rotate(200deg) brightness(50%);

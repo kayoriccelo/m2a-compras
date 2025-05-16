@@ -3,9 +3,9 @@ import React from "react"
 import { SBotaoSelecionePlano } from "./_styled"
 
 
-export default function BotaoSelecionePlano({ isCabecalhoFlutuante }) {
+export default function BotaoSelecionePlano() {
     return (
-        <SBotaoSelecionePlano isCabecalhoFlutuante={isCabecalhoFlutuante}>
+        <SBotaoSelecionePlano>
             Selecione um plano
         </SBotaoSelecionePlano>
     )

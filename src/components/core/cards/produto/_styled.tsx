@@ -18,13 +18,13 @@ export const SCardProdutoImagem = styled.div<ISCardProdutoImagem>`
     align-items: flex-start;
     justify-content: flex-end;
     min-height: 15rem;
-    margin: -0.8rem 0.8rem 0.8rem -0.8rem;
     border-radius: 0.8rem;
     background: url(${props => props.url_imagem}) no-repeat center center;
     background-size: cover;
     box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.34);
     filter: brightness(75%);
     min-width: 15rem;
+    cursor: pointer;
     
     @media (max-width: 1200px) {
         flex: 1 1 calc(50% - 20px); /* 2 itens por linha em telas menores */
@@ -36,6 +36,17 @@ export const SCardProdutoImagem = styled.div<ISCardProdutoImagem>`
 
     &:hover {
         filter: brightness(65%);
+    }
+visivel
+    transition: all 0.5s ease;
+    animation: ${props => props.visivel ? 'slideIn 0.5s ease forwards' : ''};
+    @keyframes slideIn {
+        from {
+            margin: 0rem;
+        }
+        100% {
+            margin: -0.8rem 0.8rem 0.8rem -0.8rem;
+        }
     }
 `;
 

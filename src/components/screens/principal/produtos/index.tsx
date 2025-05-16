@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useEffect, useState } from 'react';
 
 import CardProduto from "@components/core/cards/produto";
 import BotaoMaisProdutos from "@components/core/botoes/mais.produtos";
@@ -37,42 +37,42 @@ export default function Produtos() {
                         titulo='M2A Planejamentos'
                         descricao='Planeje suas demandas'
                         url_imagem={imgProdutoContratos}
-                        style={{ background: 'royalblue'}}
+                        style={{ background: 'royalblue' }}
                     />
 
                     <CardProduto
                         titulo='M2A Compras'
                         descricao='Crie suas demandas'
                         url_imagem={imgProdutoCompras}
-                        style={{ background: 'rgba(0, 110, 156, 0.69)'}}
+                        style={{ background: 'rgba(0, 110, 156, 0.69)' }}
                     />
 
                     <CardProduto
                         titulo='M2A Pesquisas'
                         descricao='Realize suas cotações de preço'
                         url_imagem={imgProdutoPesquisas}
-                        style={{ background: '#0F9B8E'}}
+                        style={{ background: '#0F9B8E' }}
                     />
 
                     <CardProduto
                         titulo='M2A Processos'
                         descricao='Parametrize suas contratações'
                         url_imagem={imgProdutoProcessos}
-                        style={{ background: '#478dcc'}}
+                        style={{ background: '#478dcc' }}
                     />
 
                     <CardProduto
                         titulo='M2A Fornecedores'
                         descricao='Participe de contratações'
                         url_imagem={imgProdutoFornecedores}
-                        style={{ background: '#2b576e'}}
+                        style={{ background: '#2b576e' }}
                     />
 
                     <CardProduto
                         titulo='M2A Contratos'
                         descricao='Gerencie seus contratos'
                         url_imagem={imgProdutoContratos}
-                        style={{ background: '#2F4F4F'}}
+                        style={{ background: '#2F4F4F' }}
                     />
                 </SProdutosContentCartoes>
             </SProdutosContent>

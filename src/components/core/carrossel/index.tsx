@@ -6,15 +6,18 @@ import {
     SCarrosselContainer,
     SCarrosselWrapper,
     SCarrosselItem,
-    SCarrosselImage,
-    SControlsContainer,
+    SCarrosselImagem,
+    SCarrosselItemTexto,
+    SCarrosselDescricao,
+    SCarrosselAssistir,
+    SCarrosselTitulo,
     SControlButton,
     SIndicatorsContainer,
     SIndicator,
 } from './_styled';
 
-export default function Carrossel({ windowWidth, handleResize, images }) {
-    const totalItems = images.length;
+export default function Carrossel({ windowWidth, registros }) {
+    const totalItems = registros.length;
     const wrapperRef = useRef(null);
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,9 +80,23 @@ export default function Carrossel({ windowWidth, handleResize, images }) {
                 </div>
 
                 <SCarrosselWrapper ref={wrapperRef}>
-                    {images.map((src, index) => (
+                    {registros.map((registro, index) => (
                         <SCarrosselItem key={index}>
-                            <SCarrosselImage src={src} />
+                            <SCarrosselImagem imagem={registro.imagem} />
+
+                            <SCarrosselItemTexto>
+                                <SCarrosselTitulo>
+                                    {registro.titulo}
+                                </SCarrosselTitulo>
+
+                                <SCarrosselDescricao>
+                                    {registro.descricao}
+                                </SCarrosselDescricao>
+
+                                <SCarrosselAssistir>
+                                    Assistir
+                                </SCarrosselAssistir>
+                            </SCarrosselItemTexto>
                         </SCarrosselItem>
                     ))}
                 </SCarrosselWrapper>

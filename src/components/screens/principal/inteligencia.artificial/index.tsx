@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {
+    useRef,
+    useEffect,
+    useState
+} from 'react';
 
 import CardInteligenciaArticifial from "@components/core/cards/inteligencia.artificial";
 
 import imgIA from "@images/ia-software.png";
 import imgIA2 from "@images/ia-2-software.png";
 import imgIA3 from "@images/ia-3-software.png";
-import imgProductPesquisas from "@images/produto_pesquisa.png";
-import imgProductProcessos from "@images/produto_processos.png";
 
 import {
     SInteligenciaArticifialContainer,
@@ -16,16 +18,52 @@ import {
 
 
 export default function InteligenciaArticifial() {
-    return (
-        <SInteligenciaArticifialContainer>
+    const ref = useRef(null)
+    const [visivel, alimentarVisivel] = useState(false);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        alimentarVisivel(true);
+                    } else {
+                        alimentarVisivel(false);
+                    }
+                });
+            },
+            {
+                threshold: 0.1
+            }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (visivel) {
+            console.log("Componente visível!");
+        };
+    }, [visivel]);
+
+    return (
+        <SInteligenciaArticifialContainer
+            ref={ref}
+        >
             <SInteligenciaArticifialTitulo>
                 MIA: A Inteligência Artificial que Entende o seu Governo
             </SInteligenciaArticifialTitulo>
 
             <SInteligenciaArticifialContent>
                 <CardInteligenciaArticifial
-                    style={{ alignSelf: 'flex-end' }}
                     imagem={imgIA}
                     titulo="Estudos Técnicos Aprofundados"
                     descricao="
@@ -37,7 +75,10 @@ export default function InteligenciaArticifial() {
                 />
 
                 <CardInteligenciaArticifial
-                    style={{ alignSelf: 'flex-start' }}
+                    style={{ 
+                        transform: visivel ? 'translateY(-30%)' : 'translateY(0)',
+                        transition: 'transform 1s ease-in-out'
+                    }}
                     imagem={imgIA3}
                     titulo="Formalização de Demandas Inteligente e Eficaz"
                     descricao="
@@ -48,7 +89,6 @@ export default function InteligenciaArticifial() {
                 />
 
                 <CardInteligenciaArticifial
-                    style={{ alignSelf: 'flex-end' }}
                     imagem={imgIA2}
                     titulo="Avaliação de Riscos Inteligente e Seguras"
                     descricao="

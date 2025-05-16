@@ -24,9 +24,8 @@ export const SInteligenciaArticifialContent = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    min-height: 45rem;
+    min-height: 65rem;
 `;
-
 
 export const SInteligenciaArticifialTitulo = styled.label`
     font-size: 1.5rem;

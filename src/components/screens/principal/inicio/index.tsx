@@ -12,15 +12,15 @@ import { IInicio } from "./_interface"
 import { SInicio } from "./_styled"
 
 
-export default function Inicio({ isCabecalhoFlutuante, windowWidth }: IInicio) {
+export default function Inicio({ ehCabecalhoFlutuante, larguraAtual }: IInicio) {
     return (
         <SInicio>
             <Cabecalho>
-                <Logo isCabecalhoFlutuante={isCabecalhoFlutuante} />
+                <Logo ehCabecalhoFlutuante={ehCabecalhoFlutuante} />
 
-                {windowWidth <= 1024 ? <MenuMobile /> : <MenuPrincipal />}
+                {larguraAtual <= 1024 ? <MenuMobile /> : <MenuPrincipal />}
 
-                <BotaoSelecionePlano isCabecalhoFlutuante={isCabecalhoFlutuante} />
+                <BotaoSelecionePlano />
             </Cabecalho>
 
             <Banner />

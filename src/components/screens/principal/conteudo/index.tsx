@@ -41,6 +41,26 @@ const Globo = styled(motion.div)`
   font-family: "Poppins", sans-serif;
   text-align: center;
   z-index: 2;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    animation: shine 3s infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      top: -100%;
+      left: -100%;
+    }
+    100% {
+      top: 100%;
+      left: 100%;
+    }
+  }
 
   @media (max-width: 768px) {
     width: 140px;
@@ -127,10 +147,18 @@ const GloboInterativo = ({ data, isVisible }) => {
     return (
         <GloboContainer>
             <Globo
-                key={isVisible ? 'visible' : 'hidden'}
-                initial={{ scale: 0.5, opacity: 0 }}
-                animate={isVisible ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                animate={isVisible ? {
+                    scale: [1, 1.1, 1],
+                    rotate: [0, 10, -10, 0],
+                } : {
+                    scale: 0.5,
+                }}
+                transition={{
+                    duration: 1,
+                    ease: "easeInOut",
+                    repeat: isVisible ? Infinity : 0,
+                    repeatDelay: 3
+                }}
             >
                 Conteúdos
             </Globo>
