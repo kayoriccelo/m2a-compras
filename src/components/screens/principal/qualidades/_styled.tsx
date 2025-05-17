@@ -10,31 +10,45 @@ export const SQualidadesContainer = styled.div`
     background-color: #ffffff;
     overflow: hidden;
     margin: 10rem 10rem 0 10rem;
+
+    @media (max-width: 768px) {
+        margin: 2rem;
+        padding: 0
+    }
 `;
 
 export const SQualidadesContent = styled.div`
     display: flex;
     flex: 1;
-    opacity: 0;
-    filter: blur(40px); /* Blur inicial */
-    transform: translateX(1000px) scaleX(1) scaleY(1); /* Posição inicial da animação (direita) */
-    transform-origin: 0% 50%;
-    transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000); /* Para transições não animadas */
-
-    &.visible-right {
-        animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    
+    @media (max-width: 768px) {
+        flex-direction: column!important;
+        align-items: center!important;
+        justify-content: center!important;
     }
 
-    &.visible-left {
-        animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-    }
+    @media (min-width: 768px) {
+        opacity: 0;
+        filter: blur(40px); /* Blur inicial */
+        transform: translateX(1000px) scaleX(1) scaleY(1); /* Posição inicial da animação (direita) */
+        transform-origin: 0% 50%;
+        transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000); /* Para transições não animadas */
 
-    &.invisible-left {
-        animation: slide-out-blurred-left 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
-    }
+        &.visible-right {
+                animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        }
 
-    &.invisible-right {
-        animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+        &.visible-left {
+                animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        }
+
+        &.invisible-left {
+                animation: slide-out-blurred-left 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+        }
+
+        &.invisible-right {
+                animation: slide-out-blurred-right 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+        }
     }
         
     @keyframes slide-in-blurred-right {
@@ -126,6 +140,11 @@ export const SQualidadesContent = styled.div`
 export const SQualidadesImagem = styled.div`
     padding: 0 5rem 5rem 5rem;
     color: #003366;
+
+    @media (max-width: 768px) {
+        margin: 2rem;
+        padding: 0
+    }
 `;
 
 export const SQualidadesTexto = styled.div`

@@ -22,7 +22,7 @@ export const SCarrosselImagem = styled.div`
     top: 0;
     height: 60%;
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
     background: url(${props => props.imagem}) no-repeat center center;
     background-size: cover;
     transition: all 0.5s ease-in-out;
@@ -35,7 +35,7 @@ export const SCarrosselItem = styled.div`
     margin: 0 1rem;
 
     @media (max-width: 768px) {
-        width: 1rem;
+        width: 0.5rem;
         flex: 0 0 calc(100% - 2rem);
     }
 
@@ -44,6 +44,7 @@ export const SCarrosselItem = styled.div`
         background-blend-mode: multiply;
         opacity: 0.3;
         z-index: -1;
+        border-radius: 1rem;
     }
 
     &:not(:hover) ${SCarrosselImagem} {
@@ -110,14 +111,19 @@ export const SControlsContainer = styled.div`
     justify-content: space-between;
     transform: translateY(-50%);
     pointer-events: none;
+    
+    @media (max-width: 768px) {
+        width: 10%;
+        z-index: 1000;
+    }
 `;
 
 export const SControlButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #333;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: #ffffff;
     border: none;
     padding: 0.5rem;
     font-size: 1.5rem;
@@ -129,11 +135,6 @@ export const SControlButton = styled.button`
 
     &:hover {
         background-color: #333;
-        color: #ffffff
-    }
-
-    @media (max-width: 1024px) {
-        display: none;
     }
 `;
 

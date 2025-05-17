@@ -30,7 +30,7 @@ export default function Noticias() {
                         src={imgProdutoProcessos}
                     />
                 </SNoticiaPrincipal>
-            
+
                 <SNoticiaLista>
                     <CardNoticia
                         numero="4°"
@@ -60,8 +60,7 @@ export default function Noticias() {
                         imagem={imgProdutoCompras}
                     />
                 </SNoticiaLista>
-                </SNoticiaContent>
-            <BotaoMaisNoticias />
+            </SNoticiaContent>
         </SNoticiaContainer>
     );
 };

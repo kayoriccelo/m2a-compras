@@ -1,6 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { MdNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
-
+import React, { 
+    useRef, 
+    useState, 
+    useEffect 
+} from "react";
+import { 
+    MdNavigateNext, 
+    MdOutlineNavigateBefore 
+} from "react-icons/md";
 
 import {
     SCarrosselContainer,
@@ -14,7 +20,8 @@ import {
     SControlButton,
     SIndicatorsContainer,
     SIndicator,
-} from './_styled';
+} from "./_styled";
+
 
 export default function Carrossel({ larguraAtual, registros }) {
     const totalItems = registros.length;
@@ -22,17 +29,15 @@ export default function Carrossel({ larguraAtual, registros }) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(3);
-    
-    const [totalPages, setTotalPages] = useState(Math.ceil(totalItems / itemsPerPage))
+
+    const [totalPages, setTotalPages] = useState(Math.ceil(totalItems / itemsPerPage));
 
     const goToPrevious = () => {
         setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 1));
     };
 
     const goToNext = () => {
-        setCurrentIndex((prevIndex) =>
-            Math.min(totalPages - 1, prevIndex + 1)
-        );
+        setCurrentIndex((prevIndex) => Math.min(totalPages - 1, prevIndex + 1));
     };
 
     const goToIndex = (index) => {
@@ -41,17 +46,17 @@ export default function Carrossel({ larguraAtual, registros }) {
 
     useEffect(() => {
         if (larguraAtual <= 768) {
-            setItemsPerPage(1)
+            setItemsPerPage(1);
 
-            setTotalPages(Math.ceil(totalItems / itemsPerPage))
-        }
-    }, [larguraAtual])
+            setTotalPages(Math.ceil(totalItems / itemsPerPage));
+        };
+    }, [larguraAtual]);
 
     useEffect(() => {
         if (wrapperRef.current) {
             wrapperRef.current.style.transition = 'transform 0.5s ease-in-out';
             wrapperRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+        };
     }, [currentIndex]);
 
     return (
@@ -74,7 +79,10 @@ export default function Carrossel({ larguraAtual, registros }) {
                         zIndex: 1,
                     }}
                 >
-                    <SControlButton onClick={goToPrevious}>
+                    <SControlButton
+                        onClick={goToPrevious}
+                        style={{ marginRight: '-2.5rem' }}
+                    >
                         <MdOutlineNavigateBefore />
                     </SControlButton>
                 </div>
@@ -112,7 +120,10 @@ export default function Carrossel({ larguraAtual, registros }) {
                         zIndex: 1,
                     }}
                 >
-                    <SControlButton onClick={goToNext}>
+                    <SControlButton
+                        onClick={goToNext}
+                        style={{ marginLeft: '-2.5rem' }}
+                    >
                         <MdNavigateNext />
                     </SControlButton>
                 </div>

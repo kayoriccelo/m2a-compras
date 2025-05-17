@@ -38,6 +38,7 @@ export const SCardInteligenciaArticifialImagem = styled.img`
 
 export const SCardInteligenciaArticifialTexto = styled.div`
     display: flex;
+    height: 20rem;
     flex-direction: column;
     padding: 24px 8px 8px;
     opacity: 1;
@@ -51,17 +52,9 @@ export const SCardInteligenciaArticifialTitulo = styled.label`
     color: #003366;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 0.5rem;
-
-    @media (max-width: 768px) {
-        font-size: 1rem;
-    }
 `;
 
 export const SCardInteligenciaArticifialDescricao = styled.label`
     font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
-
-    @media (max-width: 768px) {
-        font-size: 0.9rem;
-    }
 `;
