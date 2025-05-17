@@ -23,7 +23,7 @@ import '../styles/global.css';
 const PaginaPrincipal = () => {
 	const [windowWidth, setWindowWidth] = useState(0);
 	const [scrollTop, setScrollTop] = useState(0);
-	
+
 	const handleScroll = () => {
 		const scrollY = window.scrollY;
 
@@ -37,14 +37,14 @@ const PaginaPrincipal = () => {
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
 
-        window.addEventListener('resize', handleResize);
+		window.addEventListener('resize', handleResize);
 
 		handleResize()
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 
-            window.removeEventListener('resize', handleResize);
+			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
 
@@ -52,14 +52,14 @@ const PaginaPrincipal = () => {
 
 	return (
 		<Container>
-			<Inicio 
+			<Inicio
 				ehCabecalhoFlutuante={ehCabecalhoFlutuante}
-				larguraAtual={windowWidth} 
+				larguraAtual={windowWidth}
 			/>
 
 			<Entidades />
 
-			<Produtos />	
+			<Produtos />
 
 			<Estatisticas />
 
@@ -68,12 +68,14 @@ const PaginaPrincipal = () => {
 			<InteligenciaArtificial />
 
 			<Depoimentos
-				windowWidth={windowWidth} 
+				larguraAtual={windowWidth}
 			/>
 
 			<Noticias />
 
-			<Conteudo />
+			<Conteudo
+				larguraAtual={windowWidth}
+			/>
 
 			<Rodape />
 		</Container>

@@ -12,7 +12,7 @@ import {
 } from "./_styled";
 
 
-export default function Depoimentos({ windowWidth }) {
+export default function Depoimentos({ larguraAtual }) {
     return (
         <SDepoimentosBloco>
             <SDepoimentosTitulo>
@@ -20,7 +20,7 @@ export default function Depoimentos({ windowWidth }) {
             </SDepoimentosTitulo>
 
             <Carrossel
-                windowWidth={windowWidth}
+                larguraAtual={larguraAtual}
                 registros={[
                     {
                         titulo: 'João Silva',

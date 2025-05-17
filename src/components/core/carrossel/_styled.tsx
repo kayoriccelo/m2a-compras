@@ -35,6 +35,7 @@ export const SCarrosselItem = styled.div`
     margin: 0 1rem;
 
     @media (max-width: 768px) {
+        width: 1rem;
         flex: 0 0 calc(100% - 2rem);
     }
 

@@ -16,7 +16,7 @@ import {
     SIndicator,
 } from './_styled';
 
-export default function Carrossel({ windowWidth, registros }) {
+export default function Carrossel({ larguraAtual, registros }) {
     const totalItems = registros.length;
     const wrapperRef = useRef(null);
 
@@ -40,12 +40,12 @@ export default function Carrossel({ windowWidth, registros }) {
     };
 
     useEffect(() => {
-        if (windowWidth <= 768) {
+        if (larguraAtual <= 768) {
             setItemsPerPage(1)
 
             setTotalPages(Math.ceil(totalItems / itemsPerPage))
         }
-    }, [windowWidth])
+    }, [larguraAtual])
 
     useEffect(() => {
         if (wrapperRef.current) {

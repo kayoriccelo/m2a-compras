@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { 
-    SMenuPrincipal, 
+import {
+    SMenuPrincipal,
     SMenuPrincipalItemLink,
     SMenuItem,
     SSubmenu,
@@ -14,19 +14,27 @@ export default function MenuPrincipal() {
     return (
         <SMenuPrincipal>
             <SMenuItem>
-                <SMenuPrincipalItemLink to="/inicio" activeClassName="active">
+                <SMenuPrincipalItemLink
+                    to="/inicio"
+                    activeClassName="active"
+                >
                     Início
                 </SMenuPrincipalItemLink>
             </SMenuItem>
 
             <SMenuItem>
-                <SMenuPrincipalItemLink to="/contratacoes" activeClassName="active">
+                <SMenuPrincipalItemLink
+                    to="/contratacoes"
+                    activeClassName="active"
+                >
                     Contratações
                 </SMenuPrincipalItemLink>
             </SMenuItem>
 
             <SMenuItem>
-                <SMenuPrincipalItemLink style={{ width: '6rem'}}>
+                <SMenuPrincipalItemLink 
+                    style={{ width: '6rem' }}
+                >
                     Produtos <SDropdownIcon />
                 </SMenuPrincipalItemLink>
 
@@ -67,17 +75,26 @@ export default function MenuPrincipal() {
 
             <SMenuItem>
                 <SMenuPrincipalItemLink
-                    to="/sobre"
-                    activeClassName="active"
+                    style={{ width: '4rem' }}
                 >
-                    Sobre
+                    Mais <SDropdownIcon />
                 </SMenuPrincipalItemLink>
-            </SMenuItem>
 
-            <SMenuItem>
-                <SMenuPrincipalItemLink to="/conteudo" activeClassName="active">
-                    Conteúdo
-                </SMenuPrincipalItemLink>
+                <SSubmenu>
+                    <SSubmenuItemLink
+                        to="/produto-a"
+                        activeClassName="active"
+                    >
+                        Sobre
+                    </SSubmenuItemLink>
+
+                    <SSubmenuItemLink
+                        to="/produto-b"
+                        activeClassName="active"
+                    >
+                        Regulamentos
+                    </SSubmenuItemLink>
+                </SSubmenu>
             </SMenuItem>
         </SMenuPrincipal>
     )

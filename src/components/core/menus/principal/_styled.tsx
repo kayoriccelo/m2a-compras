@@ -14,6 +14,7 @@ const growUnderline = keyframes`
 `;
 
 export const SMenuPrincipal = styled.ul`
+    margin: 1rem;
     padding: 0 40px;
     height: 4rem;
     display: flex;

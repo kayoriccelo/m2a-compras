@@ -41,26 +41,6 @@ const Globo = styled(motion.div)`
   font-family: "Poppins", sans-serif;
   text-align: center;
   z-index: 2;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    animation: shine 3s infinite;
-  }
-
-  @keyframes shine {
-    0% {
-      top: -100%;
-      left: -100%;
-    }
-    100% {
-      top: 100%;
-      left: 100%;
-    }
-  }
 
   @media (max-width: 768px) {
     width: 140px;
@@ -107,7 +87,7 @@ const Card = styled(motion.div)`
   @media (max-width: 768px) {
     width: 100px;
     height: 70px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   &:hover {
@@ -115,8 +95,7 @@ const Card = styled(motion.div)`
   }
 `;
 
-const positions = [
-    // Círculo interno
+const posicoes = [
     { x: -0, y: -300 },
     { x: 0, y: 300 },
     { x: -300, y: 200 },
@@ -127,14 +106,26 @@ const positions = [
     { x: 300, y: -200 },
 ];
 
-const GloboInterativo = ({ data, isVisible }) => {
+const posicoesMobile = [
+    { x: -70, y: -110 }, //ok
+    { x: 0, y: 220 }, // ok
+    { x: 70, y: -110 }, //ok
+    { x: -0, y: -220 }, // ok
+    { x: -70, y: 110 },
+    { x: 70, y: 110 },
+    { x: -130, y: -0 },
+    { x: 130, y: -0 },
+];
+
+const GloboInterativo = ({ data, visivel, larguraAtual }) => {
+    const posicoesCards = larguraAtual <= 768 ? posicoesMobile : posicoes 
     const animationVariants = {
         hidden: { opacity: 0, scale: 0.5, x: 0, y: 0 },
         visible: (index) => ({
             opacity: 1,
             scale: 1,
-            x: positions[index].x,
-            y: positions[index].y,
+            x: posicoesCards[index].x,
+            y: posicoesCards[index].y,
             transition: {
                 delay: index * 0.1,
                 duration: 0.5,
@@ -147,34 +138,26 @@ const GloboInterativo = ({ data, isVisible }) => {
     return (
         <GloboContainer>
             <Globo
-                animate={isVisible ? {
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 10, -10, 0],
-                } : {
-                    scale: 0.5,
-                }}
-                transition={{
-                    duration: 1,
-                    ease: "easeInOut",
-                    repeat: isVisible ? Infinity : 0,
-                    repeatDelay: 3
-                }}
+                key={visivel ? 'visible' : 'hidden'}
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={visivel ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }}
+                transition={{ duration: 0.5 }}
             >
                 Conteúdos
             </Globo>
-            
+
             {data?.map((conteudo, index) => (
                 <Card
-                    key={`${index}-${isVisible}`}
+                    key={`${index}-${visivel}`}
                     custom={index}
                     initial="hidden"
-                    animate={isVisible ? "visible" : "hidden"}
+                    animate={visivel ? "visible" : "hidden"}
                     variants={animationVariants}
                     bgImage={conteudo.imagem}
                     whileHover={{
                         scale: 1.1,
                         transition: { duration: 0.5 },
-                        zIndex: 1000,
+                        zIndex: 1000 + conteudo.id,
                     }}
                 >
                     <div
@@ -184,7 +167,7 @@ const GloboInterativo = ({ data, isVisible }) => {
                             borderRadius: '0.5rem'
                         }}
                     >
-                    {conteudo.titulo}
+                        {conteudo.titulo}
                     </div>
                 </Card>
             ))}
@@ -204,9 +187,9 @@ const DadosExemplo = [
     { id: 8, titulo: 'Sustentabilidade', imagem: imgProdutoPesquisas },
 ];
 
-const Conteudo = () => {
+const Conteudo = ({ larguraAtual }) => {
     const ref = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
+    const [visivel, setIsVisible] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -233,7 +216,11 @@ const Conteudo = () => {
 
     return (
         <div ref={ref}>
-            <GloboInterativo data={DadosExemplo} isVisible={isVisible} />
+            <GloboInterativo
+                data={DadosExemplo}
+                visivel={visivel}
+                larguraAtual={larguraAtual}
+            />
         </div>
     );
 };
