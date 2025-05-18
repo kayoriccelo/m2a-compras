@@ -30,7 +30,7 @@ export const SNoticiaContainer = styled.div`
 
     @media (max-width: 1024px) {
         flex-direction: row;
-        height: 120rem;
+        height: 160rem;
         width: 100%;
         margin: 0;
     }
@@ -124,6 +124,7 @@ export const SNoticiaSecundaria = styled.div`
 
     @media (max-width: 768px) {
         height: 100%;
+        flex-direction: column;
     }
 `;
 
