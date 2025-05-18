@@ -14,10 +14,6 @@ import {
 export default function CardNoticia({ numero, titulo, data, imagem, style }: ICardNoticia) {
     return (
         <SCardNoticiaContainer style={style}>
-            <SCardNoticiaNumero>
-                {numero}
-            </SCardNoticiaNumero>
-
             <SCardNoticiaContent>
                 <SCardNoticiaTitulo>
                     {titulo}
